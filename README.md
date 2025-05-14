@@ -21,7 +21,6 @@ Geek-Up-Intern-Frontend/
 ├── package.json            # Project metadata and dependencies
 └── README.md               # Project documentation
 ```
-
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites

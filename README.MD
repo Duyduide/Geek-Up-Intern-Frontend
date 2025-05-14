@@ -1,48 +1,55 @@
-# refine-project
+# Geek-Up Intern Frontend
 
-<div align="center" style="margin: 30px;">
-    <a href="https://refine.dev">
-    <img alt="refine logo" src="https://refine.ams3.cdn.digitaloceanspaces.com/readme/refine-readme-banner.png">
-    </a>
-</div>
-<br/>
+A frontend web application built using [Refine](https://refine.dev/), a React framework optimized for internal tools and admin panels.
 
-This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
+## 📁 Project Structure
 
-## Getting Started
+Geek-Up-Intern-Frontend/
+├── public/ # Static assets like favicon and index.html
+├── src/ # Application source code
+│ ├── assets/ # Images and other static files
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page components/routes
+│ ├── App.tsx # Root component
+│ └── main.tsx # Entry point
+├── .eslintrc.cjs # ESLint config
+├── Dockerfile # Docker container setup
+├── tsconfig.json # TypeScript configuration
+├── vite.config.ts # Vite development/build setup
+├── yarn.lock # Yarn lockfile
+├── package.json # Project metadata and dependencies
+└── README.md # Project documentation
+## 🚀 Getting Started
 
-A React Framework for building internal tools, admin panels, dashboards & B2B apps with unmatched flexibility ✨
+### ✅ Prerequisites
 
-Refine's hooks and components simplifies the development process and eliminates the repetitive tasks by providing industry-standard solutions for crucial aspects of a project, including authentication, access control, routing, networking, state management, and i18n.
+- Node.js (v16+ recommended)
+- Yarn package manager
 
-## Available Scripts
+### 📦 Installation
 
-### Running the development server.
+1. Clone the repository:
 
-```bash
-    npm run dev
-```
+   ```bash
+   git clone https://github.com/Duyduide/Geek-Up-Intern-Frontend.git
+   cd Geek-Up-Intern-Frontend
+    ```
 
-### Building for production.
+2. Install dependencies with Yarn:
+    ```bash
+    yarn install
+    ```
+3. Start the development server:
+    ```bash
+    yarn dev
+    ```
+4. Open your browser and navigate to `http://localhost:5173` to view the application.
 
-```bash
-    npm run build
-```
-
-### Running the production server.
-
-```bash
-    npm run start
-```
-
-## Learn More
-
-To learn more about **Refine**, please check out the [Documentation](https://refine.dev/docs)
-
-- **REST Data Provider** [Docs](https://refine.dev/docs/core/providers/data-provider/#overview)
-- **Ant Design** [Docs](https://refine.dev/docs/ui-frameworks/antd/tutorial/)
-- **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
-
-## License
-
-MIT
+## 🛠️ Techstack
+- **React**: JavaScript library for building user interfaces.
+- **Refine**: Framework for building internal tools and admin panels.
+- **TypeScript**: Superset of JavaScript that adds static types.
+- **Vite**: Build tool that provides a fast development environment.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Query**: Library for fetching, caching, and synchronizing server state in React applications.
+- **Antd**: UI component library for React, providing a set of high-quality components.

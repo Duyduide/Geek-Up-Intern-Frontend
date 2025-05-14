@@ -4,21 +4,23 @@ A frontend web application built using [Refine](https://refine.dev/), a React fr
 
 ## 📁 Project Structure
 
-Geek-Up-Intern-Frontend/
-├── public/ # Static assets like favicon and index.html
-├── src/ # Application source code
-│ ├── assets/ # Images and other static files
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Page components/routes
-│ ├── App.tsx # Root component
-│ └── main.tsx # Entry point
-├── .eslintrc.cjs # ESLint config
-├── Dockerfile # Docker container setup
-├── tsconfig.json # TypeScript configuration
-├── vite.config.ts # Vite development/build setup
-├── yarn.lock # Yarn lockfile
-├── package.json # Project metadata and dependencies
-└── README.md # Project documentation
+```
+Geek-Up-Intern-Frontend/ 
+├── public/                 # Static assets like favicon and index.html
+├── src/                    # Application source code
+│   ├── assets/             # Images and other static files
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Page components/routes
+│   ├── App.tsx             # Root component
+│   └── main.tsx            # Entry point
+├── .eslintrc.cjs           # ESLint config
+├── Dockerfile              # Docker container setup
+├── tsconfig.json           # TypeScript configuration
+├── vite.config.ts          # Vite development/build setup
+├── yarn.lock               # Yarn lockfile
+├── package.json            # Project metadata and dependencies
+└── README.md               # Project documentation
+```
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites

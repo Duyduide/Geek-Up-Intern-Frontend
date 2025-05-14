@@ -78,7 +78,11 @@ export const UsersList = () => {
             dataIndex="actions"
             render={(_, record: BaseRecord) => (
             <Space>
-              <ShowButton size="small" recordItemId={record.id} />
+              <ShowButton 
+              size="small" 
+              recordItemId={record.id} 
+              resource="users"
+              />
             </Space>
           )}
         />

@@ -13,6 +13,7 @@ import {
   RotateRightOutlined, 
   FullscreenOutlined 
 } from "@ant-design/icons";
+import { Link } from "react-router";
 
 const { Title } = Typography;
 
@@ -27,12 +28,21 @@ export const AlbumShow = () => {
   const [photos, setPhotos] = useState<{id: number, title: string, url: string, thumbnailUrl: string}[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Fetch the user who owns this album
-  const { data: userData, isLoading: userIsLoading } = useOne({
+  // Fetch the Album
+  const { data: albumData, isLoading: userIsLoading } = useOne({
     resource: "albums",
     id: record?.id || "",
     queryOptions: {
       enabled: !!record?.userId,
+    },
+  });
+
+  // Fetch user who owns this album
+  const { data: userData } = useOne({
+    resource: "users",
+    id: albumData?.data?.userId || "",
+    queryOptions: {
+      enabled: !!albumData?.data?.userId,
     },
   });
 
@@ -76,16 +86,20 @@ export const AlbumShow = () => {
     <Show isLoading={isLoading || userIsLoading} headerButtons={[]}>
       <div style={{ marginBottom: "32px" }}>
         <Space align="start">
-          <Avatar 
+            <Avatar 
             src={generateAvatarUrl(userData?.data?.name)} 
             size={48}
             style={{ backgroundColor: "#e91e63" }}
-          >
+            >
             {getInitials(userData?.data?.name || "")}
-          </Avatar>
+            </Avatar>
           <Space direction="vertical" size={0}>
             <Title level={5} style={{ margin: 0 }}>
-              {userData?.data?.name || "Loading..."}
+              {userData?.data?.name && (
+              <Link to={`/users/show/${userData?.data?.id}`} style={{ color: "#1890ff" }}>
+                {userData?.data?.name}
+              </Link>
+            )}
             </Title>
             {userData?.data?.email && (
               <a href={`mailto:${userData?.data?.email}`} style={{ color: "#1890ff" }}>

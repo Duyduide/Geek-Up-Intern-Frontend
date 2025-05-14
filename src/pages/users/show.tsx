@@ -2,6 +2,7 @@ import { Show, TextField, useTable, ShowButton } from "@refinedev/antd";
 import { useShow, useMany } from "@refinedev/core";
 import { Typography, Avatar, Space, Table, Button } from "antd";
 import { generateAvatarUrl, getInitials } from '../../utils/helperFunction'
+import { Link } from "react-router";
 const { Title } = Typography;
 
 export const UserShow = () => {
@@ -76,7 +77,8 @@ export const UserShow = () => {
         <Table.Column 
           title="Actions" 
           render={(_, record) => (
-            <ShowButton size="small" recordItemId={record.id} />
+
+              <ShowButton size="small" recordItemId={record.id} resource="albums" />
           )} 
         />
       </Table>
